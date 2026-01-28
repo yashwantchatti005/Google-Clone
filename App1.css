@@ -62,7 +62,7 @@ html, body, #root {
   gap: 12px;
   width: 560px;
   max-width: 90%;
-  margin: 0 auto 10px;
+  margin: 0 auto 25px;
   border: 1px solid #dfe1e5;
   border-radius: 24px;
   padding: 10px 16px;
@@ -85,57 +85,6 @@ html, body, #root {
 .icon {
   font-size: 18px;
   color: #9aa0a6;
-}
-
-/* CLEAR BUTTON */
-.clear-btn {
-  border: none;
-  background: transparent;
-  font-size: 18px;
-  cursor: pointer;
-  color: #70757a;
-}
-
-.clear-btn:hover {
-  color: #202124;
-}
-
-/* HISTORY */
-.history {
-  width: 560px;
-  max-width: 90%;
-  margin: 0 auto 20px;
-  background: #fff;
-  border-radius: 8px;
-  text-align: left;
-}
-
-.history-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 14px;
-  font-size: 14px;
-}
-
-.history-text {
-  cursor: pointer;
-}
-
-.history-item:hover {
-  background: #f1f3f4;
-}
-
-.history-remove {
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  font-size: 16px;
-  color: #70757a;
-}
-
-.history-remove:hover {
-  color: #202124;
 }
 
 /* BUTTONS */
@@ -220,31 +169,7 @@ html, body, #root {
   color: #9aa0a6;
 }
 
-.app.dark .history {
-  background: #303134;
-}
-
-.app.dark .history-item:hover {
-  background: #3c4043;
-}
-
-.app.dark .clear-btn {
-  color: #9aa0a6;
-}
-
-.app.dark .clear-btn:hover {
-  color: #e8eaed;
-}
-
-.app.dark .history-remove {
-  color: #9aa0a6;
-}
-
-.app.dark .history-remove:hover {
-  color: #e8eaed;
-}
-
-/* TOGGLE */
+/* Toggle Button */
 .theme-btn {
   border: none;
   background: transparent;
@@ -257,8 +182,8 @@ html, body, #root {
   .logo {
     width: 200px;
   }
-  .search-box,
-  .history {
+
+  .search-box {
     width: 95%;
   }
 }

@@ -10,12 +10,10 @@ export default function App() {
 
   const inputRef = useRef(null);
 
-  /* Save theme */
   useEffect(() => {
     localStorage.setItem("theme", dark ? "dark" : "light");
   }, [dark]);
 
-  /* Ctrl + L focus */
   useEffect(() => {
     const handler = (e) => {
       if (e.ctrlKey && e.key === "l") {
@@ -39,10 +37,6 @@ export default function App() {
       `https://www.google.com/search?q=${encodeURIComponent(query)}`,
       "_blank"
     );
-  };
-
-  const removeHistoryItem = (item) => {
-    setHistory((prev) => prev.filter((q) => q !== item));
   };
 
   return (
@@ -72,7 +66,6 @@ export default function App() {
         <form onSubmit={handleSearch} className="search-form">
           <div className="search-box">
             <span className="icon">🔍</span>
-
             <input
               ref={inputRef}
               type="text"
@@ -80,38 +73,18 @@ export default function App() {
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search Google or type a URL"
             />
-
-            {query && (
-              <button
-                type="button"
-                className="clear-btn"
-                onClick={() => {
-                  setQuery("");
-                  inputRef.current.focus();
-                }}
-              >
-                ✕
-              </button>
-            )}
+            <span className="icon">🎤</span>
           </div>
 
           {history.length > 0 && (
             <div className="history">
               {history.map((item, i) => (
-                <div key={i} className="history-item">
-                  <span
-                    className="history-text"
-                    onClick={() => setQuery(item)}
-                  >
-                    🔍 {item}
-                  </span>
-                  <button
-                    type="button"
-                    className="history-remove"
-                    onClick={() => removeHistoryItem(item)}
-                  >
-                    ✕
-                  </button>
+                <div
+                  key={i}
+                  className="history-item"
+                  onClick={() => setQuery(item)}
+                >
+                  🔍 {item}
                 </div>
               ))}
             </div>
