@@ -1,4 +1,4 @@
-🔍 Google Clone (React)
+## 🔍 Google Clone (React)
 
 🌐 Live Demo:
 👉 https://google-clone-ds6l.vercel.app/
@@ -6,7 +6,7 @@
 A responsive Google Search Clone built using React (Create React App).
 This project replicates the core UI and basic behavior of Google Search with additional features like dark mode, search history, and keyboard shortcuts.
 
-✨ Features
+## ✨ Features
 
 🔎 Google-style search interface
 
@@ -24,9 +24,9 @@ This project replicates the core UI and basic behavior of Google Search with add
 
 🚀 Deployed on Vercel
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 
-React (Create React App)
+## React (Create React App)
 
 JavaScript (ES6+)
 
@@ -36,11 +36,7 @@ CSS3
 
 Vercel (Deployment)
 
-📸 Preview
-
-(Optional: You can add screenshots later)
-
-🚀 Getting Started (Local Setup)
+## 🚀 Getting Started (Local Setup)
 1️⃣ Clone the repository
 git clone https://github.com/yashwantchatti005/Google-Clone.git
 cd Google-Clone
@@ -52,14 +48,14 @@ npm install
 npm start
 
 
-The app will run at:
+## The app will run at:
 👉 http://localhost:3000
 
 🏗️ Build for Production
 npm run build
 
 
-This creates an optimized production build inside the build/ folder.
+## This creates an optimized production build inside the build/ folder.
 
 🌍 Deployment
 
@@ -71,10 +67,10 @@ Build Command: npm run build
 
 Output Directory: build
 
-🔗 Live URL:
+## 🔗 Live URL:
 👉 https://google-clone-ds6l.vercel.app/
 
-🧠 What I Learned
+## 🧠 What I Learned
 
 Handling production build errors (ESLint warnings treated as errors)
 
@@ -84,7 +80,7 @@ Managing UI state using React Hooks (useState, useEffect, useRef)
 
 Improving UX with keyboard shortcuts and localStorage
 
-👤 Author
+## 👤 Author
 
 Yashwant Kumar
 
