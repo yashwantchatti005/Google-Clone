@@ -135,15 +135,16 @@ export default function App() {
       </main>
 
       {/* FOOTER */}
-      <footer className="footer">
-        <p>India</p>
-        <div>
-          <a href="#">About</a>
-          <a href="#">Advertising</a>
-          <a href="#">Business</a>
-          <a href="#">Privacy</a>
-        </div>
-      </footer>
+<footer className="footer">
+  <p>India</p>
+  <div>
+    <a href="/">About</a>
+    <a href="/">Advertising</a>
+    <a href="/">Business</a>
+    <a href="/">Privacy</a>
+  </div>
+</footer>
+
     </div>
   );
 }
