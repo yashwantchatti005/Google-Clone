@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+🔍 Google Clone (React)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🌐 Live Demo:
+👉 https://google-clone-ds6l.vercel.app/
 
-## Available Scripts
+A responsive Google Search Clone built using React (Create React App).
+This project replicates the core UI and basic behavior of Google Search with additional features like dark mode, search history, and keyboard shortcuts.
 
-In the project directory, you can run:
+✨ Features
 
-### `npm start`
+🔎 Google-style search interface
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+🌗 Light / Dark mode (saved in localStorage)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+⌨️ Keyboard shortcut: Ctrl + L to focus search input
 
-### `npm test`
+🕘 Recent search history (click to reuse, remove individually)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+❌ Clear search input button
 
-### `npm run build`
+🌍 Real Google search redirection
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+📱 Fully responsive design
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🚀 Deployed on Vercel
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+🛠️ Tech Stack
 
-### `npm run eject`
+React (Create React App)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+JavaScript (ES6+)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+HTML5
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+CSS3
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Vercel (Deployment)
 
-## Learn More
+📸 Preview
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+(Optional: You can add screenshots later)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+🚀 Getting Started (Local Setup)
+1️⃣ Clone the repository
+git clone https://github.com/yashwantchatti005/Google-Clone.git
+cd Google-Clone
 
-### Code Splitting
+2️⃣ Install dependencies
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3️⃣ Run the app
+npm start
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The app will run at:
+👉 http://localhost:3000
 
-### Making a Progressive Web App
+🏗️ Build for Production
+npm run build
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+This creates an optimized production build inside the build/ folder.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+🌍 Deployment
 
-### Deployment
+The project is deployed using Vercel.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Framework Preset: Create React App
 
-### `npm run build` fails to minify
+Build Command: npm run build
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Output Directory: build
+
+🔗 Live URL:
+👉 https://google-clone-ds6l.vercel.app/
+
+🧠 What I Learned
+
+Handling production build errors (ESLint warnings treated as errors)
+
+Proper React deployment configuration on Vercel
+
+Managing UI state using React Hooks (useState, useEffect, useRef)
+
+Improving UX with keyboard shortcuts and localStorage
+
+👤 Author
+
+Yashwant Kumar
+
+🌐 Portfolio: https://yashwantchatti005.github.io/Portfolio/
+
+💻 GitHub: https://github.com/yashwantchatti005
+
+📄 License
+
+This project is for learning and portfolio purposes only.
+Google branding and assets belong to Google.
