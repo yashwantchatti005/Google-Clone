@@ -25,8 +25,7 @@ This project replicates the core UI and basic behavior of Google Search with add
 🚀 Deployed on Vercel
 
 ## 🛠️ Tech Stack
-
-## React (Create React App)
+React (Create React App)
 
 JavaScript (ES6+)
 
