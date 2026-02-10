@@ -10,113 +10,125 @@ export default function App() {
 
   const inputRef = useRef(null);
 
+  /* ================= THEME ================= */
   useEffect(() => {
     localStorage.setItem("theme", dark ? "dark" : "light");
   }, [dark]);
 
+  /* ================= SHORTCUT ================= */
   useEffect(() => {
     const handler = (e) => {
       if (e.ctrlKey && e.key === "l") {
         e.preventDefault();
-        inputRef.current.focus();
+        inputRef.current?.focus();
       }
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
   }, []);
 
-  const handleSearch = (e) => {
-    e.preventDefault();
+  /* ================= HISTORY ================= */
+  const saveHistory = () => {
     if (!query.trim()) return;
-
     setHistory((prev) =>
       [query, ...prev.filter((q) => q !== query)].slice(0, 5)
-    );
-
-    window.open(
-      `https://www.google.com/search?q=${encodeURIComponent(query)}`,
-      "_blank"
     );
   };
 
   return (
     <div className={`app ${dark ? "dark" : ""}`}>
-      {/* NAVBAR */}
-      <nav className="nav">
-        <a href="https://mail.google.com" target="_blank" rel="noreferrer">
-          Gmail
-        </a>
-        <a href="https://images.google.com" target="_blank" rel="noreferrer">
-          Images
-        </a>
-
+      {/* ================= HEADER ================= */}
+      <header className="nav">
+        <a href="https://mail.google.com">Gmail</a>
+        <a href="https://images.google.com">Images</a>
         <button className="theme-btn" onClick={() => setDark(!dark)}>
           {dark ? "☀️" : "🌙"}
         </button>
-      </nav>
+      </header>
 
-      {/* MAIN */}
-      <main className="main">
-        <img
-          src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
-          alt="Google"
-          className="logo"
-        />
-
-        <form onSubmit={handleSearch} className="search-form">
-          <div className="search-box">
-            <span className="icon">🔍</span>
-            <input
-              ref={inputRef}
-              type="text"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search Google or type a URL"
+      {/* ================= MAIN ================= */}
+      <main className="hero">
+        <section className="hero-content">
+          {/* BRANDING */}
+          <section className="branding">
+            <img
+              src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+              alt="Google"
+              className="logo"
             />
-            <span className="icon">🎤</span>
-          </div>
+            <p className="tagline">Search smarter. Faster. Cleaner.</p>
+          </section>
 
-          {history.length > 0 && (
-            <div className="history">
-              {history.map((item, i) => (
-                <div
-                  key={i}
-                  className="history-item"
-                  onClick={() => setQuery(item)}
-                >
-                  🔍 {item}
-                </div>
-              ))}
-            </div>
-          )}
-
-          <div className="buttons">
-            <button type="submit">Google Search</button>
-            <button
-              type="button"
-              onClick={() =>
-                window.open(
-                  "https://yashwantchatti005.github.io/Portfolio/",
-                  "_blank"
-                )
-              }
+          {/* SEARCH SECTION */}
+          <section className="search-card">
+            <form
+              className="search-form"
+              action="https://www.google.com/search"
+              method="GET"
+              onSubmit={saveHistory}
             >
-              My Portfolio
-            </button>
-          </div>
-        </form>
+              {/* SEARCH BOX */}
+              <div className="search-box">
+                <span className="icon">🔍</span>
+                <input
+                  ref={inputRef}
+                  type="text"
+                  name="q"
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  placeholder="Search Google or type a URL"
+                />
+                <span className="icon">🎤</span>
+              </div>
+
+              {/* HISTORY */}
+              {history.length > 0 && (
+                <section className="history">
+                  {history.map((item, i) => (
+                    <div
+                      key={i}
+                      className="history-item"
+                      onClick={() => setQuery(item)}
+                    >
+                      🔍 {item}
+                    </div>
+                  ))}
+                </section>
+              )}
+
+              {/* ACTIONS */}
+              <section className="buttons">
+                <button type="submit">Google Search</button>
+                <button
+                  type="button"
+                  onClick={() =>
+                    (window.location.href =
+                      "https://yashwantchatti005.github.io/Portfolio/")
+                  }
+                >
+                  My Portfolio
+                </button>
+              </section>
+
+              {/* HINT */}
+              <section className="hint">
+                Press <kbd>Ctrl</kbd> + <kbd>L</kbd> to focus
+              </section>
+            </form>
+          </section>
+        </section>
       </main>
 
-      {/* FOOTER */}
-<footer className="footer">
-  <p>India</p>
-  <div>
-    <a href="/">About</a>
-    <a href="/">Advertising</a>
-    <a href="/">Business</a>
-    <a href="/">Privacy</a>
-  </div>
-</footer>
+      {/* ================= FOOTER ================= */}
+      <footer className="footer">
+        <p>India</p>
+        <div>
+          <a href="/">About</a>
+          <a href="/">Advertising</a>
+          <a href="/">Business</a>
+          <a href="/">Privacy</a>
+        </div>
+      </footer>
     </div>
   );
 }
